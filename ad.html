@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<link rel="stylesheet" href="./css/style.css">
+		<link rel="stylesheet" href="./css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Gugi|Source+Serif+Pro" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+	<meta charset="UTF-8">
+	<title>design</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+	<script>
+$(document).ready(function(){
+	//메뉴 토글
+	$(".toggle").click(function(){
+		$(".toggle").hide();
+		$("#main_toggle").animate({right:0});
+		$(".close").show();
+	});
+	$(".close").click(function(){
+		$(".close").hide();
+		$("#main_toggle").animate({right:-750});
+		$(".toggle").show();
+	});
+
+	//서브메뉴 탭
+	$(".sub_gnb>li").eq(0).addClass("select");
+	$(".sub_description2").eq(0).show();
+	$(".sub_gnb>li").click(function(){
+		$(".sub_gnb>li").removeClass();
+		$(this).addClass("select");
+		$(".sub_description2").hide().eq($(this).intro()).show();
+	});
+  
+  $(window).scroll(function(){
+  	var sct = $(window).scrollTop();
+  	console.log(sct);
+  	if(sct > 100){
+  		$("#logo").hide();
+  	}
+
+  	if(sct < 200){
+  		$("#logo").show();
+  	}
+  	
+  	if( $(this).scrollTop() >= 200 ){
+					$("#topBtn").fadeIn();
+				}else{
+					$("#topBtn").fadeOut();}
+				});
+			$("#topBtn").click(function(){
+					$("html,body").animate({scrollTop:0},500);
+
+  })
+
+});
+	</script>
+</head>
+<body>
+<header id="sub_header3">
+<!-- 상단 고정 메뉴 -->
+<div id="sub_top">
+	<div id="logo">
+		<div class="main_logo">
+		<a href="intro.html"><h1><img src="./image/main_logo.png" alt="M·A·C"></h1></a></div>
+		<div class="toggle"><img src="./image/btn_toggle.png" alt="토글 버튼"></div>
+		<div class="close"><img src="./image/btn_close.png" alt="닫기 버튼"></div>
+	</div>
+
+
+<!-- 메뉴 토글 -->
+<div id="main_toggle">
+	<div class="toggle_bg"></div>
+
+	<nav class="toggle_menu">
+		<ul>
+			<!-- <li><a href="introduction .html">자기소개서</a>
+			 <ul>
+			 	<li><a href="introduction .html">성장과정</a></li>
+			 	<li><a href="introduction .html">직무역량</a></li>
+			 	<li><a href="introduction .html">장점과 단점</a></li>
+			 </ul> -->
+			<li><a href="http://nikerenewal.dothome.co.kr/">NIKE</a>
+			 <ul>
+			 	<li><a href="http://nikerenewal.dothome.co.kr/">NIKE</a></li>
+			 	
+			 </ul>
+			</li>
+			<li><a href="https://xkzldhs10.github.io/kimsujiportfolio/company/">WRIIEN COMPANY</a>
+			 <ul>
+			 	<li><a href="https://xkzldhs10.github.io/kimsujiportfolio/company/">WRIIEN</a></li>
+			 	</ul>
+			</li>
+			<li><a href="http://dlfwnf10.dothome.co.kr/">TWOSOME PLACE</a>
+			 <ul>
+			 	<li><a href="http://dlfwnf10.dothome.co.kr/">TWOSOME </a></li>
+			 	<!-- <li><a href="sub3.html">MENU</a></li>
+			 	<li><a href="sub3.html">STORY</a></li> -->
+			 </ul>
+			</li>
+			<li><a href="ad.html">Advertising design</a>
+			 <ul>
+			 	<li><a href="ad.html">AD design</a></li>
+			 	<li><a href="ad.html">WEP design</a></li>
+			 	<li><a href="ad.html">APP design</a></li>
+			 </ul>
+			</li>
+		</ul>
+
+	</nav>
+</div>
+
+<!-- 타이틀 -->
+<div id="sub_title">
+	<div class="title">AD/WEP/APP<br>DESIGN</div>
+	
+</div>
+<nav id="sub_menu">
+	<ul class="sub_gnb">
+	 <!-- <li>AD design</li> -->
+	 <!-- <li>WEP design</li>
+	 <li>APP design</li> -->
+	</ul>
+</nav>
+</div>
+</header>
+
+<!-- 서브 내용 -->
+<a id="topBtn" href="#">▲TOP</a>
+<div class="sub_description2">
+	<p class="s_title">광고 디자인</p>
+
+	<br>
+	<div class="stroke"></div>
+<div class="design">
+	<img src="./design/ad6.jpg" alt="ad1">
+	<img src="./design/ad2.jpg" alt="ad2">
+	<img src="./design/ad3.jpg" alt="ad3">
+	<img src="./design/wed1.jpg" alt="ad2">
+	<img src="./design/wed3.jpg" alt="ad3">
+	<img src="./design/wed2.jpg" alt="ad1">
+	<img src="./design/ad5.jpg" alt="ad2">
+	<img src="./design/ad8.jpg" alt="ad3">
+	<img src="./design/lg1.jpg" alt="ad3">
+	<img src="./design/lg2.jpg" alt="ad3">
+	<img src="./design/ap1.jpg" alt="ad3">
+	<img src="./design/ap2.jpg" alt="ad3">
+	<img src="./design/ap3.jpg" alt="ad3">
+	<img src="./design/ap4.jpg" alt="ad3">
+	<img src="./design/ba1.jpg" alt="ad3">
+	<img src="./design/ba2.jpg" alt="ad3">
+
+</div>
+</div>
+
+<a id="topBtn" href="#">▲TOP</a>
+<div class="sub_description2">
+	<p class="s_title">광고 디자인</p>
+
+	<br>
+	<div class="stroke"></div>
+<div class="design">
+	<img src="./design/ad1.jpg" alt="ad1">
+	<img src="./design/ad2.jpg" alt="ad2">
+	<img src="./design/ad3.jpg" alt="ad3">
+
+</div>
+</div>
+
+<div class="sub_description2">
+	<p class="s_title">웹 디자인</p>
+	<div class="stroke"></div>
+  
+<div class="w_design">
+	<img src="./design/ad1.jpg" alt="ad2">
+	<img src="./design/wad1.jpg" alt="ad1">
+	<img src="./design/wad3.jpg" alt="ad3">
+
+</div>
+</div>
+
+<div class="sub_description2">
+	<p class="s_title">앱 디자인</p>
+	<div class="stroke"></div>
+
+	<div class="a_design">
+	<img src="./design/app5.jpg" alt="ad2">
+	<img src="./design/app4.jpg" alt="ad2">
+	<img src="./design/app3.jpg" alt="ad2">
+	<img src="./design/app1.jpg" alt="ad2">
+	
+	<img src="./design/app6.jpg" alt="ad2">
+	<!-- <img src="./design/app7.jpg" alt="ad2"> -->
+
+
+</div>
+  
+  <!-- <img src="./img/sub02_1.jpg" alt="스트롭 설명3"> -->
+</div>
+
+<div style="height:100px;display:block;clear:both"></div>
+
+<!-- 푸터 -->
+<footer>
+ <div id="footer_main">
+ 	<div class="footer_logo">
+ 		<img src="./image/footer_logo.png" alt="푸터 로고">
+ 	</div>
+ 	
+	<div class="footer_address">
+	<p>Email-kimsuz30@naver.com<br>
+	   Phone Number-010.2269.2960</p><br>
+	 <p>개인 작업물 포트폴리오 자기소개서 공간입니다.</p>
+	</div>
+ </div>
+</footer>
+</body>
+</html>

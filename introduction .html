@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<link rel="stylesheet" href="./css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Gugi|Source+Serif+Pro" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+	<meta charset="UTF-8">
+	<title>introduce</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+	<script>
+$(document).ready(function(){
+	//메뉴 토글
+	$(".toggle").click(function(){
+		$(".toggle").hide();
+		$("#main_toggle").animate({right:0});
+		$(".close").show();
+	});
+	$(".close").click(function(){
+		$(".close").hide();
+		$("#main_toggle").animate({right:-750});
+		$(".toggle").show();
+	});
+
+	//서브메뉴 탭
+	$(".sub_gnb>li").eq(0).addClass("select");
+	$(".sub_description").eq(0).show();
+	$(".sub_gnb>li").click(function(){
+		$(".sub_gnb>li").removeClass();
+		$(this).addClass("select");
+		$(".sub_description").hide().eq($(this).intro()).show();
+	});
+  
+  $(window).scroll(function(){
+  	var sct = $(window).scrollTop();
+  	console.log(sct);
+  	if(sct > 100){
+  		$("#logo").hide();
+  	}
+
+  	if(sct < 200){
+  		$("#logo").show();
+  	}
+  	
+  	if( $(this).scrollTop() >= 200 ){
+					$("#topBtn").fadeIn();
+				}else{
+					$("#topBtn").fadeOut();}
+				});
+			$("#topBtn").click(function(){
+					$("html,body").animate({scrollTop:0},500);
+
+  })
+
+});
+	</script>
+</head>
+<body>
+<header id="sub_header2">
+<!-- 상단 고정 메뉴 -->
+<div id="sub_top">
+	<div id="logo">
+		<div class="main_logo">
+		<a href="intro.html"><h1><img src="./image/main_logo.png" alt="M·A·C"></h1></a></div>
+		<div class="toggle"><img src="./image/btn_toggle.png" alt="토글 버튼"></div>
+		<div class="close"><img src="./image/btn_close.png" alt="닫기 버튼"></div>
+	</div>
+
+
+<!-- 메뉴 토글 -->
+<div id="main_toggle">
+	<div class="toggle_bg"></div>
+
+<nav class="toggle_menu">
+		<ul>
+			<li><a href="introduction .html">자기소개서</a>
+			 <ul>
+			 	<li><a href="introduction .html">성장과정</a></li>
+			 	<li><a href="introduction .html">직무역량</a></li>
+			 	<li><a href="introduction .html">장점과 단점</a></li>
+			 </ul>
+			<li><a href="http://nikerenewal.dothome.co.kr/">NIKE</a>
+			 <ul>
+			 	<li><a href="http://nikerenewal.dothome.co.kr/">NIKE</a></li>
+			 	
+			 </ul>
+			</li>
+			<li><a href="https://xkzldhs10.github.io/kimsujiportfolio/company/">WRIIEN COMPANY</a>
+			 <ul>
+			 	<li><a href="https://xkzldhs10.github.io/kimsujiportfolio/company/">WRIIEN</a></li>
+			 	</ul>
+			</li>
+			<li><a href="http://dlfwnf10.dothome.co.kr/">TWOSOME PLACE</a>
+			 <ul>
+			 	<li><a href="http://dlfwnf10.dothome.co.kr/">TWOSOME </a></li>
+			 	<!-- <li><a href="sub3.html">MENU</a></li>
+			 	<li><a href="sub3.html">STORY</a></li> -->
+			 </ul>
+			</li>
+			<li><a href="ad.html">Advertising design</a>
+			 <ul>
+			 	<li><a href="ad.html">AD design</a></li>
+			 	<li><a href="ad.html">WEP design</a></li>
+			 	<li><a href="ad.html">APP design</a></li>
+			 </ul>
+			</li>
+		</ul>
+
+	</nav>
+</div>
+
+<!-- 타이틀 -->
+<div id="sub_title">
+	<div class="title">간단하게 한눈에 보는 자기소개서!</div>
+	<p>Let me introduce myself</p>
+</div>
+<nav id="sub_menu">
+	<ul class="sub_gnb">
+	 <li>자기소개/성장과정</li>
+	 <li>직무역량</li>
+	 <li>성격의 장단점</li>
+	</ul>
+</nav>
+</div>
+</header>
+
+<!-- 서브 내용 -->
+<a id="topBtn" href="#">▲TOP</a>
+<div class="sub_description">
+	<p class="s_title">자기소개/성장과정</p>
+
+	<br>
+	<div class="stroke"></div>
+
+  <p class="s_des">어린 시절부터 저는 맥가이버 같은 아버지 밑에서 자랐습니다.<br> 건설업에 종사하셔서 공구를 잘 다루시고 작업을 수월하게 진행하시는데, "한 사람이 아닌 많은 사람이 사용하기에 불편함이 없게 만드는 것이 중요하다."라고 늘 말씀해주셨습니다. 나이가 많으신 할머니, 관심이 없어 사용법을 모르는 삼촌, 어린 학생들도 편하고 어려움 없이 이용할 수가 있어야 좋은 물건이라고 하셨습니다. 저는 그런 아버지 밑에서 특정 한 사람을 위하여 만들어진 물건이 아니라 다수를 위하여 다수에게 이로울 수 있는 물건을 디자인 하고 만드는 것에 큰 관심을 두게 되었습니다.<br> 부모님이 맞벌이로 바쁘셔서 혼자 책을 읽거나 그림을 그리며 혼자 있는 시간을 보내곤 했습니다. 혼자라서 외롭다는 느낌보다는 스스로 할 일을 하는 습관을 들이고, 부모님을 기다리는 늦은 시간까지 하는 다큐멘터리를 보며 모르던 분야와 관심이 없었던 영역의 지식을 받아들이며 다양한 분야의 지식들을 쌓을 수 있었습니다. <br>덕분에 친구들과 이야기 할 때에도 다양한 분야의 대화를 이끌어 내면서 의견을 주고받으며 더욱 넓은 생각을 할 수 있게 되어 소통의 중요성을 알게 되었습니다. 학창시절 웹과 모바일을 많이 사용하며 웹디자인이라는 분야를 알게 되어 많은 흥미를 느끼게 되었고, 모두에게 편한 서비스를 제공하는 것 또한 중요한 일이라고 생각하였습니다. </p>
+  <!-- <img src="./img/sub02_1d.jpg" alt="스트롭 설명1"> -->
+</div>
+<div class="sub_description">
+	<p class="s_title">직무역량</p>
+	<div class="stroke"></div>
+  <p class="s_des">제가 학교생활을 하면서 가장 기억에 남는 일이 있다면 탐구 토론 대회에 나간 것입니다.<br>
+학교 친구들과 나갔던 대회인데 열심히 준비해서 결과적으로 시 대표까지 진출하여 나가게 되었습니다.<br>주제를 조사하고, 정보와 자료를 수집했습니다.<br>실험 반론준비 발표 연습 PPT 제작 등 장장 6개월 동안 준비하였습니다.<br>방학 때도 나와서 대회를 준비하고 틈나면 연습하였습니다.<br>마침내 좋은 결과를 얻었을 때 엄청난 성취감과 보람을 느꼈습니다. 저는 그 대회 통해 자신감과 이루었다는 성취감을 얻을 수 있었습니다.<br>학창시절 좋은 경험을 많이 남길 수 있어서 큰 의미가 있었습니다. 도전하여 한걸음 성장하는 계기가 생겨 함께 나도 성장할 수 있었다고 생각합니다.
+팀 프로젝트로 홈페이지 리뉴얼 이라는 과제가 주어졌을 때에도 팀원들과 협력하여 원하는 결과물로 이끌어 나가는 과정에서 얻는 성취감과 보람은 컸으며 이를 통해 팀원들과 의견을 조율해 나아가는 법과 과제를 분배하여 정해진 시간 안에 빠르게 끝내고 수정을 하는 과정에서 팀 워들 간의 소통과 작업분배의 중요성을 느꼈습니다. <br><br>
+평소 관심있었던 웹 디자인과 코딩, 디지털 디자인의 전문성을 키우기 위해 전문기관에서 6개월 과정을 이수하여 웹을 기반으로 하는 웹 디자인과<br> 코딩, 앱 제작 등의 기능을 배울 수 있었습니다.<br> 배운 것을 활용하여 리뉴얼 사이트를 만들며, 기존 사이트에서 개선할 점은 없는지 찾아가며 스스로 구조를 짜고 구현하는 것을 실습했습니다.<br> 과정이 끝난 후 에도 부족한 공부와 포트폴리오 제작 하며 내가 원하는 것, 생각한 것을 어떻게 구현할지 머리로 구상하고, 찾아본 것을 코드로 짜서 웹 사이트로 구현될 때의 성취감은 말로 표현하지 못할 정도였습니다.<br>교육과정내내 새로운 것에 도전하고 시도하면서 원하는 디자인을 구현할 수 있는 디자이너로 거듭날 수 있었습니다.<br> 입사 후, 교육에서 배운 이론과 경험을 살려 실무에 더욱 강한 직원으로 인정받겠습니다. <br> 디자인에 대해 전문적으로 배울 수 있는 학원을 알아보고 웹 디자인과 코딩 수업을 들으면서 웹이란 무엇인가에 대해서 배우며 웹 표준의 중요성에 대해 깨달았고, 사용자의 접근성이 좋은 디자인과 그렇지 않은 디자인을 보며 사용자에게 다가가기 쉽게 디자인 및 코딩하기 위해 노력 했습니다. <br>그러다보니 사용자의 입장에서 홈페이지를 기획하여 컨셉을 새로 잡고 포토샵을 이용해 re-design 하였습니다.<br> 에디트 플러스, 제이쿼리, 스크립트를 이용하여 기존의 UI/UX를 똑같이 구현 하는 일에 집중 하였습니다. </p>
+  <!-- <img src="./img/sub02_1.jpg" alt="스트롭 설명2"> -->
+</div>
+<div class="sub_description">
+	<p class="s_title">성격의 장단점</p>
+	<div class="stroke"></div>
+  <p class="s_des">저의 장점은 누군가 만들어놓은 길을 찾아가는 쉽고 당연한 길보다 모험을 하여 스스로 자신만의 길을 개척해 나아가는것입니다.<br>먼저 일을 경험해본 사람들이 밟은 경로를 다음 세대의 사람이 따라가고 참고하는 방법은 어쩔 수 없지만 누군가가 만들어둔 길을 밟지 않더라도 자신만의 스스로 길을 만들고 발전해야 성장하는 길이라고 생각합니다.<br>평생 다른 사람의 길을 벗어나지 못하고 길을 따라가다 보면 감을 잊고 예정된 미래를 겪을 거라고 생각합니다.<br> 그 때문에 저는 누구보다 적극적으로 저의 인생을 설계하고 나갈 줄 아는 사람으로서 진취적인 행동을 보이고 싶었던 것입니다.<br> 저의 존재를 세상에 알리고 싶은 작은 욕심이기도 했지만, 저의 능력이 세상을 위해 쓰일 수 있도록 노력하고 싶은 마음가짐이기도 했습니다. <br><br>저의 단점은 걱정이 많은 것입니다. 당장 내일이 걱정되고 불안하고 걱정을 사서 하는 그런 사람이었습니다.<br>어느 날 책에서 이런 속담을 보았습니다. 티베트 속담 중에 "해결될 문제라면 걱정할 필요가 없고, 해결 안 될 문제라면 걱정해도 소용이 없다"는 말이 있습니다.걱정은 문제 해결에 아무런 도움이 되지 못합니다. 걱정해서 걱정할 일이 사라진다면, 걱정할 일이 없겠죠. 백해무익한 것이 걱정입니다. 라는것입니다.<br> 그 문장을 읽는순간 그 동안 걱정했던 마음이 편안해지고 머리가 맑아지면서 걱정 할 필요가 없구나! 지난일과 일어나지 않은 일을 걱정하면서 시간을 보내지 말고 내가 정한 선택에 집중하자고 생각했습니다.<br> 저는 걱정이 많은 단점들을 극복하고 더욱 견고한 사람이 되었습니다.
+</p>
+  <!-- <img src="./img/sub02_1.jpg" alt="스트롭 설명3"> -->
+</div>
+
+<div style="height:100px;display:block;clear:both"></div>
+
+<!-- 푸터 -->
+<footer>
+ <div id="footer_main">
+ 	<div class="footer_logo">
+ 		<img src="./image/footer_logo.png" alt="푸터 로고">
+ 	</div>
+ 	
+	<div class="footer_address">
+	<p>Email-kimsuz30@naver.com<br>
+	   Phone Number-010.2269.2960</p><br>
+	 <p>개인 작업물 포트폴리오 자기소개서 공간입니다.</p>
+	</div>
+ </div>
+</footer>
+</body>
+</html>
